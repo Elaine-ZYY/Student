@@ -21,6 +21,7 @@ and open the template in the editor.
         $first->add_grade(65);
         $first->add_grade(75);
         $first->add_grade(55);
+        $first->add_status("大一");
         $students['j123'] = $first;
 
         $second = new Student();
@@ -32,6 +33,7 @@ and open the template in the editor.
         $second->add_grade(95);
         $second->add_grade(80);
         $second->add_grade(50);
+        $second->add_status("大二");
         $students['a456'] = $second;
         
         $third  = new Student();
@@ -42,7 +44,19 @@ and open the template in the editor.
         $third->add_grade(81);
         $third->add_grade(99);
         $third->add_grade(75);
+        $third->add_status("大三");
         $students['c789'] = $third;
+        
+        $fourth  = new Student();
+        $fourth->surname = "Joile";
+        $fourth->first_name = "Elaien";
+        $fourth->add_email('home','2865647933@qq.com');
+        $fourth->add_email('work','Elaine@dgpt.ca');
+        $fourth->add_grade(95);
+        $fourth->add_grade(80);
+        $fourth->add_grade(50);
+        $fourth->add_status("大四");
+        $students['a101112'] = $fourth;
         
         foreach ($students as $student)
             echo $student->toString();
